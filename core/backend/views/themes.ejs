@@ -1,0 +1,14 @@
+<%- include('partials/header') %>
+
+<div class="card-deck">
+  <% for (var i = 0; i < 3; i++) { %>
+    <%- include('partials/theme', { theme_name: i }) %>
+  <% } %>
+  <div class="card">
+    <form class="dropzone" action="/themes" id="themeUpload">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    </form>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

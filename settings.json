@@ -1,0 +1,17 @@
+{
+  "site": {
+    "title": "My Blue Site",
+    "admin_pages": [
+      "dashboard",
+      "settings",
+      "themes",
+      "plugins"
+    ]
+  },
+  "default_user": {
+    "username": "blueAdmin",
+    "nickname": "Admin",
+    "password": "BlueCMS",
+    "email": "contact@localhost"
+  }
+}

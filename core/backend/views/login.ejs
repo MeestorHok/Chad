@@ -1,0 +1,59 @@
+<%- include('partials/head') %>
+<img src="/ba/img/login_screen_bg.jpg" alt="Background" style="position:fixed;width:100vw;min-height:100vh;z-index:-1;" />
+
+<style>
+  ::-webkit-input-placeholder {
+    color: #444 !important;
+    opacity: 0.5 !important;
+  }
+  :-moz-placeholder {
+    color: #444 !important;
+    opacity: 0.5 !important;
+  }
+  ::-moz-placeholder {
+    color: #444 !important;
+    opacity: 0.5 !important;
+  }
+  :-ms-input-placeholder {
+    color: #444 !important;
+    opacity: 0.5 !important;
+  }
+  input::placeholder {
+    color: #444 !important;
+    opacity: 0.5 !important;
+  }
+  .form-group .form-control {
+    background:rgba(255,255,255,0.3);
+    border: none !important;
+    color: #666;
+  }
+</style>
+
+<div class="container" style="height:100vh;">
+  <div class="row h-100 justify-content-center align-items-center">
+    <div class="col col-xs-11 col-sm-8 col-md-6 col-lg-4 col-xl-3">
+      <% if (error && error.length > 0) { %>
+        <blockquote class="blockquote" style="font-size: 1rem;color: #fff;opacity: 0.7;">
+          <p class="mb-0"><%= error %></p>
+        </blockquote>
+      <% } %>
+
+      <form action="/login" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+        <div class="form-group">
+          <input class="form-control" type="text" name="username" placeholder="Username" autofocus />
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" placeholder="Enter Password" />
+        </div>
+
+        <input type="submit" style="position:absolute;left:-9999px;width:1px;height:1px;" tabindex="-1" />
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>

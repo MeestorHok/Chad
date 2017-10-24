@@ -1,0 +1,11 @@
+<ul class="nav flex-column">
+  <% site.admin_pages.forEach((page) => {
+    var pageLink = (page === 'dashboard') ? '/' : page %>
+    <li class="nav-item">
+      <a class="nav-link<%= active(slashBefore(slugify(pageLink)), slashBefore(url)) %>"
+          href="<%= link(slugify(pageLink)) %>">
+        <%= titleCase(page) %>
+      </a>
+    </li>
+  <% }) %>
+</ul>

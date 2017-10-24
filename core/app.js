@@ -53,7 +53,7 @@ Object.assign(app.locals, settings)
 Object.assign(app.locals, helpers.ejs)
 
 // Define Passport protocol
-var User = require('../models/user')
+var User = require('./models/user')
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())

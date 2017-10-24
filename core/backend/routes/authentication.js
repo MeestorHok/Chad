@@ -5,7 +5,7 @@ var express = require('express'),
     passport = require('passport'),
     controller = require('./controllers/authentication'),
     requireLoggedIn = require('../../helpers').enforceLoggedIn,
-    requireLoggedOut = require('../../helpers').enforceLoggedOut,
+    requireLoggedOut = require('../../helpers').enforceLoggedOut
 
 router.get('/login', requireLoggedOut, controller.login.get)
 

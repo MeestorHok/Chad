@@ -17,7 +17,7 @@ exports.buildData = (req, csrf) => {
  * Handle Index/Dashboard route
  */
 exports.index = (req, res) => {
-  res.render('backend/index', exports.buildData(req))
+  res.render('backend/index', exports.buildData(req, true))
 }
 
 /**
